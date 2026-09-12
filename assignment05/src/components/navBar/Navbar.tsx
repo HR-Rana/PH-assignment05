@@ -13,7 +13,7 @@ export default function Navbar() {
                 <img src={logo} alt="logo" />
             </div>
 
-            <div className="nav">
+            <div className="nav ">
                 <Link to={"#"} >Home</Link>
                 <Link to={"#"} >Technologies</Link>
                 <Link to={"#"} >Projects</Link>
@@ -21,7 +21,7 @@ export default function Navbar() {
                 <Link to={"#"} >Contact</Link>
             </div>
             <div className="buttons">
-                <button>Sign In</button>
+                <button className='bg-green-800 text-white-600 '>Sign In</button>
                 <button>Sign Up</button>
             </div>
 
