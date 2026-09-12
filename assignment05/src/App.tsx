@@ -18,22 +18,24 @@ const DataFetch = async () => {
 function App() {
 
   const DataPromise = DataFetch();
-  console.log(DataPromise)
+
 
   return (
-    <>
-      <div className="navigation-bar">
+    <div className=''>
+      <div className="navigation-bar shadow-black shadow-sm bg-white py-4 sticky top-0">
         <Navbar />
       </div>
-      <div className="hero-section ">
-        <Hero />
+      <div className="container mx-auto">
+        <div className="hero-section ">
+          <Hero />
+        </div>
+        <div className="technologies">
+          <Suspense fallback={"Loding data......."} >
+            <Technologies DataPromise={DataPromise} />
+          </Suspense>
+        </div>
       </div>
-      <div className="technologies">
-        <Suspense fallback={"Loding data......."} >
-          <Technologies DataPromise={DataPromise} />
-        </Suspense>
-      </div>
-    </>
+    </div>
   )
 }
 
