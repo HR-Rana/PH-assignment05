@@ -1,19 +1,32 @@
+import { FiAlignJustify } from "react-icons/fi";
+import { FaTimes } from "react-icons/fa";
 
 import { Link } from 'react-router-dom'
 
 import logo from '../../assets/images/Link.png'
+import { useState } from "react";
 
 
 export default function Navbar() {
+    const [open, setOpen] = useState(false);
+
 
 
     return (
         <div className='NavItems grid grid-cols-12 flex justify-between items-center  mx-auto container' >
+            <div className="menu-bar pl-3 col-span-3" onClick={() => setOpen(!open)}>
+                {
+                    open ? <FaTimes className="text-[26px] cursor-pointer" /> :
+                        <FiAlignJustify className="text-[26px] cursor-pointer" />
+                }
+
+
+            </div>
             <div className="logo col-span-3">
                 <img src={logo} alt="logo" />
             </div>
 
-            <div className="nav col-span-4 flex justify-between">
+            <div className={`nav nav-items ${open ? "responsive" : ""} col-span-4 flex justify-between`}>
                 <Link to={"#"} className='font-semibold text-orange-600' >Home</Link>
                 <Link to={"#"} >Technologies</Link>
                 <Link to={"#"} >Projects</Link>

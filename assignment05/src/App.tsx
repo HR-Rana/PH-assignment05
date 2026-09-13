@@ -31,7 +31,7 @@ function App() {
         <div className="hero-section ">
           <Hero />
         </div>
-        <div className="technologies">
+        <div className="technologies my-[50px] py-[40px]">
           <Suspense fallback={"Loding data......."} >
             <Technologies DataPromise={DataPromise} />
           </Suspense>

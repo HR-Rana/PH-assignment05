@@ -23,11 +23,11 @@ export default function Technologies({ DataPromise }) {
 
 
     return (
-        <div className='technology-section'>
+        <div className='technology-section '>
             <div className="title"></div>
-            <div className="techonology-data grid gap-5 grid-cols-12">
+            <div className="techonology-data flex-col sm:block  md:block lg:flex 2xl:grid grid gap-5 grid-cols-12">
                 <div className="left-site col-span-9">
-                    <div className="grid grid-cols-3 gap-4"> {
+                    <div className="sm:grid-cols-2 md:grid-cols-2 grid  lg:grid-cols-3 2xl:grid-cols-3 gap-4"> {
                         allData?.map((data: TechnologyTypes) => {
                             return (
                                 <TechnologyCard data={data} addedToStack={addedToStack} setAddedToStack={setAddedToStack} selectedStack={selectedStack} setSelectedStack={setSelectedStack} key={data.id} />

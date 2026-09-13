@@ -1,11 +1,11 @@
-import React from 'react'
-import img from '../../assets/images/Hero Isometric 3D Graphic Column.png'
+
+import img from '../../assets/images/Hero.png'
 
 export default function Hero() {
     return (
-        <div className='hero-section flex justify-between justify-between gap-10  grid grid-cols-12'>
-            <div className="left-content col-span-6 items-center flex  gap-6">
-                <div>
+        <div className='hero-section  flex justify-between justify-between  gap-10 py-[30px] grid grid-cols-12 '>
+            <div className="left-content col-span-6 mx-auto lg:col-span-6 2xl:col-span-6 items-center flex  gap-6">
+                <div className='flex flex-col gap-5'>
                     <h2 className='text-6xl font-bold'>Build Your Ideal
                         <span className='text-orange-600 font-bold'> Development Stack</span></h2>
                     <p className='my-7'>Explore frontend, backend, database, and tooling options,
@@ -18,8 +18,8 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
-            <div className="right-content">
-                <img className='hero-img' src={img} alt="Hero image" />
+            <div className="right-content  flex text-right col-span-12 md:col-span-6 lg:col-span-6 2xl-col-span-6">
+                <img className='hero-img w-full flex text-right ' src={img} alt="Hero image" />
             </div>
         </div>
     )

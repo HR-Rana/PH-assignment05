@@ -1,0 +1,84 @@
+/* .hero-section .right-content {
+    width: 100%;
+    background-color: greenyellow;
+} */
+
+li {
+    list-style: none;
+}
+
+body {
+    color: rgb(82, 80, 80)
+}
+
+.hero-section h2 {
+    font-weight: 900;
+
+}
+
+.menu-bar {
+    display: none;
+}
+
+.hero-section h2 span {
+    background: linear-gradient(to right, rgb(1, 134, 230), rgb(214, 0, 107), rgb(246, 1, 189));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
+.hero-section button:first-child {
+    background: linear-gradient(to right, rgb(1, 134, 230), rgb(214, 0, 107), rgb(246, 1, 189));
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1024px) {
+    .nav-items {
+        display: none;
+    }
+
+    .menu-bar {
+        display: block;
+    }
+
+    .responsive {
+        display: block;
+        width: 80%;
+        height: 100vh;
+        background-color: white;
+        position: absolute;
+        right: 0;
+        top: 0;
+        text-align: center;
+        padding: 100px;
+    }
+
+    .responsive a {
+
+        display: block;
+        margin: 20px 0;
+        border-bottom: 0.5px solid gray;
+    }
+
+    .responsive a:last-child {
+        border-bottom: none;
+    }
+}
