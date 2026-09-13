@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FaStar } from "react-icons/fa";
 import { toast } from 'react-toastify';
+import type { TechnologyTypes } from '../../types/technologyTypes';
 
 
 
@@ -16,7 +17,7 @@ export default function TechnologyCard({
 
 
     const isAdded = selectedStack.some(
-        (item) => item.id === data.id
+        (item: TechnologyTypes) => item.id === data.id
     );
 
     const selectedTechnologie = () => {

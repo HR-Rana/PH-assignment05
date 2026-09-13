@@ -18,8 +18,8 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
-            <div className="right-content col-span-5 justify-end w-full flex justify-end">
-                <img className='text-center w-full ml-10 ' src={img} alt="Hero image" />
+            <div className="right-content">
+                <img className='hero-img' src={img} alt="Hero image" />
             </div>
         </div>
     )

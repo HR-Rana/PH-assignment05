@@ -5,6 +5,7 @@ import Hero from './components/HeroSection/Hero'
 import Technologies from './components/ExploreTechnologies/Technologies'
 import { Suspense } from 'react'
 import type { TechnologyTypes } from './types/technologyTypes'
+import Footer from './components/footer/Footer'
 
 
 const DataFetch = async (): Promise<TechnologyTypes> => {
@@ -35,6 +36,9 @@ function App() {
             <Technologies DataPromise={DataPromise} />
           </Suspense>
         </div>
+      </div>
+      <div className="footer-section mt-[50px]  border-1 border-gray-200">
+        <Footer />
       </div>
     </div>
   )
