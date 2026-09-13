@@ -31,7 +31,10 @@ export default function Technologies({ DataPromise }: DataProps) {
 
     return (
         <div className='technology-section '>
-            <div className="title"></div>
+            <div className="title my-10">
+                <h2 className='text-[48px] font-bold'>Explore the <span className='text-pink-600'>Technologies</span></h2>
+                <p>Pick one technology per category to build your ideal stack.</p>
+            </div>
             <div className="techonology-data flex-col sm:block  md:block lg:flex 2xl:grid grid gap-5 grid-cols-12">
                 <div className="left-site col-span-9">
                     <div className="sm:grid-cols-2 md:grid-cols-2 grid  lg:grid-cols-3 2xl:grid-cols-3 gap-4"> {
