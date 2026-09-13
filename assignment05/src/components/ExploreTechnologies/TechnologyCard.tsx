@@ -1,16 +1,29 @@
 import React, { useState } from 'react'
 import { FaStar } from "react-icons/fa";
+import { toast } from 'react-toastify';
 
 
 
 
-export default function TechnologyCard({ selectedStack, setSelectedStack, data }) {
-    const [addedtoStack, setAddedToStack] = useState(false)
+export default function TechnologyCard({
+    selectedStack,
+    setSelectedStack,
+    data,
+    addedToStack,
+    setAddedToStack,
+
+}) {
+
+
+    const isAdded = selectedStack.some(
+        (item) => item.id === data.id
+    );
 
     const selectedTechnologie = () => {
         setAddedToStack(true);
-
         setSelectedStack([...selectedStack, data])
+
+        toast.success(`${data.name} is Added successfully`)
 
     }
 
@@ -38,11 +51,11 @@ export default function TechnologyCard({ selectedStack, setSelectedStack, data }
                 </div>
                 <button
 
-                    onClick={selectedTechnologie}
-                    disabled={addedtoStack}
+                    onClick={() => selectedTechnologie()}
+                    disabled={isAdded}
                     className='bg-black  w-full p-2 my-2 text-white capitilized cursor-pointer rounded'>
                     {
-                        addedtoStack === true ? "Added" : "Add to Stack"
+                        isAdded === true ? "Added" : "Add to Stack"
                     }
                 </button>
             </div>

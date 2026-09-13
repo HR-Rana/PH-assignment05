@@ -3,23 +3,23 @@ import img from '../../assets/images/Hero Isometric 3D Graphic Column.png'
 
 export default function Hero() {
     return (
-        <div className='hero-section justify-between  grid grid-cols-12'>
-            <div className="left-content col-span-6 items-center flex   gap-6">
+        <div className='hero-section flex justify-between justify-between gap-10  grid grid-cols-12'>
+            <div className="left-content col-span-6 items-center flex  gap-6">
                 <div>
                     <h2 className='text-6xl font-bold'>Build Your Ideal
                         <span className='text-orange-600 font-bold'> Development Stack</span></h2>
-                    <p>Explore frontend, backend, database, and tooling options,
+                    <p className='my-7'>Explore frontend, backend, database, and tooling options,
                         compare them side by side, and put together the stack that fits your
                         next project.
                     </p>
-                    <div>
-                        <button>Explore Technologies</button>
-                        <button>Learn More</button>
+                    <div className='flex gap-5'>
+                        <button className='bg-orange-600 px-2 py-2 c cursor-pointer rounded-sm text-white font-semibold'>Explore Technologies</button>
+                        <button className='border-1 border-gray-700c cursor-pointer rounded-sm  p-3'>Learn More</button>
                     </div>
                 </div>
             </div>
-            <div className="right-content col-span-5 flex mx-auto ">
-                <img className='text-center' src={img} alt="Hero image" />
+            <div className="right-content col-span-5 justify-end w-full flex justify-end">
+                <img className='text-center w-full ml-10 ' src={img} alt="Hero image" />
             </div>
         </div>
     )

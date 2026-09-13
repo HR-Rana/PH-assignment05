@@ -2,20 +2,24 @@
 import { use, useState } from 'react'
 import TechnologyCard from './TechnologyCard'
 import AddedTechnologiesList from './AddedTechnologiesList'
+import type { TechnologyTypes } from '../../types/technologyTypes';
+import { toast } from 'react-toastify';
 
 export default function Technologies({ DataPromise }) {
-
+    const [addedToStack, setAddedToStack] = useState(false);
     const [selectedStack, setSelectedStack] = useState([]);
 
 
-    const handleRemovePlayer = (data) => {
-        const RemovePlayer = selectedStack.filter((item) => item.name !== data.name);
-
-        setSelectedStack(RemovePlayer)
+    const handleRemovePlayer = (data: TechnologyTypes) => {
+        const RemovePlayer = selectedStack.filter((item: TechnologyTypes) => item.name !== data.name);
+        setSelectedStack(RemovePlayer);
+        toast.error(`${data.name} is Remove`)
 
     }
 
-    const allData = use(DataPromise)
+
+
+    const allData: TechnologyTypes = use(DataPromise)
 
 
     return (
@@ -24,9 +28,9 @@ export default function Technologies({ DataPromise }) {
             <div className="techonology-data grid gap-5 grid-cols-12">
                 <div className="left-site col-span-9">
                     <div className="grid grid-cols-3 gap-4"> {
-                        allData.map((data) => {
+                        allData?.map((data: TechnologyTypes) => {
                             return (
-                                <TechnologyCard data={data} selectedStack={selectedStack} setSelectedStack={setSelectedStack} key={data.id} />
+                                <TechnologyCard data={data} addedToStack={addedToStack} setAddedToStack={setAddedToStack} selectedStack={selectedStack} setSelectedStack={setSelectedStack} key={data.id} />
                             )
                         })
 

@@ -4,9 +4,10 @@ import Navbar from './components/navBar/Navbar'
 import Hero from './components/HeroSection/Hero'
 import Technologies from './components/ExploreTechnologies/Technologies'
 import { Suspense } from 'react'
+import type { TechnologyTypes } from './types/technologyTypes'
 
 
-const DataFetch = async () => {
+const DataFetch = async (): Promise<TechnologyTypes> => {
   const Res = await fetch('/data/Data.json')
   const data = await Res.json();
   return data

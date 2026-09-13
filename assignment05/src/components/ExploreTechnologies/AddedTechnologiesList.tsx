@@ -1,5 +1,7 @@
 import React from 'react'
 import { RxCross2 } from "react-icons/rx";
+import { toast } from 'react-toastify';
+import type { TechnologyTypes } from '../../types/technologyTypes';
 
 export default function AddedTechnologiesList({ selectedStack, setSelectedStack, handleRemovePlayer }) {
 
@@ -7,8 +9,10 @@ export default function AddedTechnologiesList({ selectedStack, setSelectedStack,
 
 
 
-    const handleRemoveAllStacks = () => {
-        setSelectedStack([])
+    const handleRemoveAllStacks = (data: TechnologyTypes) => {
+        toast.error(`All data are remove done`)
+        setSelectedStack([]);
+
     }
 
 
@@ -25,7 +29,7 @@ export default function AddedTechnologiesList({ selectedStack, setSelectedStack,
             </div>
             <div className="stack-body mt-7 w-full   mx-auto py-3   rounded-sm">
                 {
-                    selectedStack.length < 1 ? <p className='text-gray-400 text-center'>Your Stack is Empty</p> : selectedStack.map((data) => {
+                    selectedStack.length < 1 ? <p className='text-gray-400 border py-7 text-center'>Your Stack is Empty</p> : selectedStack.map((data: TechnologyTypes) => {
                         return (
                             <div className='data-card rounded-md border-1 my-2 p-2 flex justify-between items-center border-black' key={data.id}>
                                 <div className="left-content flex gap-5 w-40">

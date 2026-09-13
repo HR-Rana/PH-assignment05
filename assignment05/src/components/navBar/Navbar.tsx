@@ -14,7 +14,7 @@ export default function Navbar() {
             </div>
 
             <div className="nav col-span-4 flex justify-between">
-                <Link to={"#"} >Home</Link>
+                <Link to={"#"} className='font-semibold text-orange-600' >Home</Link>
                 <Link to={"#"} >Technologies</Link>
                 <Link to={"#"} >Projects</Link>
                 <Link to={"#"} >About</Link>
