@@ -5,9 +5,15 @@ import AddedTechnologiesList from './AddedTechnologiesList'
 import type { TechnologyTypes } from '../../types/technologyTypes';
 import { toast } from 'react-toastify';
 
-export default function Technologies({ DataPromise }) {
-    const [addedToStack, setAddedToStack] = useState(false);
-    const [selectedStack, setSelectedStack] = useState([]);
+
+interface DataProps {
+    DataPromise: Promise<TechnologyTypes[]>;
+}
+
+
+export default function Technologies({ DataPromise }: DataProps) {
+    const [addedToStack, setAddedToStack] = useState<boolean>(false);
+    const [selectedStack, setSelectedStack] = useState<TechnologyTypes[]>([]);
 
 
     const handleRemovePlayer = (data: TechnologyTypes) => {
@@ -19,7 +25,7 @@ export default function Technologies({ DataPromise }) {
 
 
 
-    const allData: TechnologyTypes = use(DataPromise)
+    const allData: TechnologyTypes[] = use(DataPromise)
 
 
     return (

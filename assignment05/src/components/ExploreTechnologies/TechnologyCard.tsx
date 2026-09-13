@@ -1,9 +1,18 @@
-import React, { useState } from 'react'
+
 import { FaStar } from "react-icons/fa";
 import { toast } from 'react-toastify';
 import type { TechnologyTypes } from '../../types/technologyTypes';
+import type { Dispatch, SetStateAction } from "react";
 
+interface TechnologyCardProps {
+    selectedStack: TechnologyTypes[];
+    setSelectedStack: Dispatch<SetStateAction<TechnologyTypes[]>>;
 
+    data: TechnologyTypes;
+
+    addedToStack: boolean;
+    setAddedToStack: Dispatch<SetStateAction<boolean>>;
+}
 
 
 export default function TechnologyCard({
@@ -13,7 +22,7 @@ export default function TechnologyCard({
     addedToStack,
     setAddedToStack,
 
-}) {
+}: TechnologyCardProps) {
 
 
     const isAdded = selectedStack.some(

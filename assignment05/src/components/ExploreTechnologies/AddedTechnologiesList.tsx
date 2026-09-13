@@ -1,7 +1,14 @@
-import React from 'react'
+
 import { RxCross2 } from "react-icons/rx";
 import { toast } from 'react-toastify';
 import type { TechnologyTypes } from '../../types/technologyTypes';
+
+interface AddedTechnologiesListProps {
+    selectedStack: TechnologyTypes[];
+    setSelectedStack: Dispatch<SetStateAction<TechnologyTypes[]>>;
+    handleRemovePlayer: (id: number) => void;
+}
+
 
 export default function AddedTechnologiesList({ selectedStack, setSelectedStack, handleRemovePlayer }) {
 
