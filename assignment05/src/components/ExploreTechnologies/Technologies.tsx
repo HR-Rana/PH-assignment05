@@ -8,6 +8,7 @@ import { toast } from 'react-toastify';
 
 interface DataProps {
     DataPromise: Promise<TechnologyTypes[]>;
+    // handleRemovePlayer: (data: TechnologyTypes) => void;
 }
 
 
@@ -16,8 +17,8 @@ export default function Technologies({ DataPromise }: DataProps) {
     const [selectedStack, setSelectedStack] = useState<TechnologyTypes[]>([]);
 
 
-    const handleRemovePlayer = (data: TechnologyTypes) => {
-        const RemovePlayer = selectedStack.filter((item: TechnologyTypes) => item.name !== data.name);
+    const handleRemovePlayer = (data: TechnologyTypes): void => {
+        const RemovePlayer = selectedStack.filter((item: TechnologyTypes) => item.id !== data.id);
         setSelectedStack(RemovePlayer);
         toast.error(`${data.name} is Remove`)
 

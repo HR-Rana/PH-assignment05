@@ -2,21 +2,22 @@
 import { RxCross2 } from "react-icons/rx";
 import { toast } from 'react-toastify';
 import type { TechnologyTypes } from '../../types/technologyTypes';
+import type { Dispatch, SetStateAction } from "react";
 
 interface AddedTechnologiesListProps {
     selectedStack: TechnologyTypes[];
     setSelectedStack: Dispatch<SetStateAction<TechnologyTypes[]>>;
-    handleRemovePlayer: (id: number) => void;
+    handleRemovePlayer: (data: TechnologyTypes) => void;
 }
 
 
-export default function AddedTechnologiesList({ selectedStack, setSelectedStack, handleRemovePlayer }) {
+export default function AddedTechnologiesList({ selectedStack, setSelectedStack, handleRemovePlayer }: AddedTechnologiesListProps) {
 
 
 
 
 
-    const handleRemoveAllStacks = (data: TechnologyTypes) => {
+    const handleRemoveAllStacks = () => {
         toast.error(`All data are remove done`)
         setSelectedStack([]);
 

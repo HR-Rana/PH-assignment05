@@ -17,7 +17,7 @@ import Footer from './components/footer/Footer'
 
 
 
-const DataFetch = async (): Promise<TechnologyTypes> => {
+const DataFetch = async (): Promise<TechnologyTypes[]> => {
   const Res = await fetch('/data/Data.json')
   const data = await Res.json();
   return data

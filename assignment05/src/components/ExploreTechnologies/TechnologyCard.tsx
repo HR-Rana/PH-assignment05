@@ -19,7 +19,6 @@ export default function TechnologyCard({
     selectedStack,
     setSelectedStack,
     data,
-    addedToStack,
     setAddedToStack,
 
 }: TechnologyCardProps) {
